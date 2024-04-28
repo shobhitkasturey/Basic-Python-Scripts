@@ -1,1 +1,1 @@
-# Basic-Python-Scripts
+Photo Capture Application
