@@ -1,4 +1,4 @@
-# Photo Capture Program#
+# Photo Capture Program
 
 Introduction
 
