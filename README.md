@@ -1,4 +1,4 @@
-#Photo Capture Program#
+# Photo Capture Program#
 
 Introduction
 
@@ -16,8 +16,8 @@ To install the necessary dependencies, run the following commands:
 
 sh
 
-pip install opencv-python
-pip install datetime
+    pip install opencv-python
+    pip install datetime
 
 How to Use the Program
 Step 1: Define the Key and Directory
@@ -26,8 +26,8 @@ The program defines a key (p by default) which, when pressed, will capture a pho
 
 python
 
-key = 'p'
-directory = 'M:\\photocap'
+    key = 'p'
+    directory = 'M:\\photocap'
 
 Step 2: Open the Camera
 
@@ -35,11 +35,11 @@ The program uses OpenCV to open the camera of the device.
 
 python
 
-capture = cv2.VideoCapture(0)
+     capture = cv2.VideoCapture(0)
 
-if not capture.isOpened():
-    print("Error opening camera")
-    exit()
+    if not capture.isOpened():
+       print("Error opening camera")
+       exit()
 
 Step 3: Capture Photos
 
@@ -47,10 +47,10 @@ The program enters an infinite loop where it continuously captures frames from t
 
 python
 
-while True:    
-    ret, frame = capture.read()
-    if ret:
-        cv2.imshow('Camera', frame)
+    while True:    
+        ret, frame = capture.read()
+          if ret:
+          cv2.imshow('Camera', frame)
 
 Step 4: Save Photos on Key Press
 
@@ -79,42 +79,41 @@ After exiting the loop, the program releases the camera and closes all OpenCV wi
 
 python
 
-capture.release()
-cv2.destroyAllWindows()
+    capture.release()
+    cv2.destroyAllWindows()
 
 Full Code
 
 python
 
-import os
-import cv2
-from datetime import datetime
+     import os
+    import cv2
+    from datetime import datetime
 
-key = 'p'
-directory = 'M:\\photocap'  
+    key = 'p'
+    directory = 'M:\\photocap'  
 
-capture = cv2.VideoCapture(0)
+    capture = cv2.VideoCapture(0)
 
-if not capture.isOpened():
-    print("Error opening camera")
-    exit()
+    if not capture.isOpened():
+      print("Error opening camera")
+      exit()
     
-count = 0  
+    count = 0  
 
-while True:    
-    ret, frame = capture.read()
-    if ret:
-        cv2.imshow('Camera', frame)
-        if cv2.waitKey(1) & 0xFF == ord(key):
-            filename = f"photo_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{count}.jpg"
-            filepath = os.path.join(directory, filename)
-            cv2.imwrite(filepath, frame)
-            count += 1
-    if cv2.waitKey(1) & 0xFF == ord('q'):  
-        break
-
-capture.release()
-cv2.destroyAllWindows()
+    while True:    
+        ret, frame = capture.read()
+          if ret:
+            cv2.imshow('Camera', frame)
+              if cv2.waitKey(1) & 0xFF == ord(key):
+                 filename = f"photo_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{count}.jpg"
+                 filepath = os.path.join(directory, filename)
+                 cv2.imwrite(filepath, frame)
+                 count += 1
+          if cv2.waitKey(1) & 0xFF == ord('q'):  
+           break
+    capture.release()
+    cv2.destroyAllWindows()
 
 Conclusion
 
