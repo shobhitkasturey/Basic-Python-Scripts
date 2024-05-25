@@ -118,3 +118,18 @@ python
 Conclusion
 
 This program allows users to capture multiple images using their device's camera by pressing a defined key. Each image is saved with a unique filename to avoid overwriting previous images. The program continues to run until the user presses the 'q' key to exit.
+
+Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+    Fork the repository.
+    Create a new branch for your feature or bugfix.
+    Commit your changes and push the branch to your forked repository.
+    Create a pull request with a description of your changes.
+    
+License
+
+This project is licensed under the MIT License. See the LICENSE file for more information. Contact
+
+For any questions or feedback, please contact shobhitkasturey@gmail.com
