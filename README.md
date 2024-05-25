@@ -1,4 +1,5 @@
-#Photo Capture Program
+#Photo Capture Program#
+
 Introduction
 
 This program captures a photo whenever a specified key is pressed. The captured photos are saved in a defined directory with unique filenames based on the current date and time.
